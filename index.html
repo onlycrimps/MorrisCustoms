@@ -5,59 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Morris Customs</title>
   <style>
+    /* Reset & base styles */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    body, html {
+    html, body {
       height: 100%;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #fff;
+      scroll-behavior: smooth;
     }
 
-    /* Hero section with parallax background */
+    /* Hero Section with iOS-compatible fixed background */
     .hero {
-      height: 100vh;
-      background-image: url('https://mountainproject.com/assets/photos/climb/118571981_medium_1582473623.jpg?cache=1702073602');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-color: #000;
-      background-position: center;
-      background-attachment: fixed;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
       position: relative;
+      height: 100vh;
+      overflow: hidden;
     }
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 1;
+    .background-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url('https://cdn2.apstatic.com/photos/climb/118571981_large_1582063874.jpg');
+      background-size: contain; /* change to 'cover' if you want full-bleed with cropping */
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #000; /* black filler bars */
+      z-index: -1;
     }
 
-    .hero .overlay {
+    .overlay {
+      position: relative;
       z-index: 2;
-      color: #fff;
+      text-align: center;
       padding: 2rem;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      max-width: 90%;
+      margin: 0 auto;
     }
 
     .hero h1 {
-      font-size: 3.5rem;
+      font-size: 3rem;
       margin-bottom: 0.5rem;
     }
 
     .hero .tagline {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
 
-    /* Content section */
+    /* Content / Blog Section */
     .content {
       background-color: #fff;
       color: #333;
@@ -88,25 +94,41 @@
       margin-bottom: 0.5rem;
       color: #222;
     }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero .tagline {
+        font-size: 1rem;
+      }
+
+      .overlay {
+        padding: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header class="hero">
+    <div class="background-image"></div>
     <div class="overlay">
       <h1>Morris Customs</h1>
-      <p class="tagline">Business Turned Blog - I'll take the sharp end</p>
+      <p class="tagline">we will take the sharp end</p>
     </div>
   </header>
 
   <main class="content">
     <section class="blog-posts">
       <h2>Welcome to My Blog</h2>
-      <p>Hello! I’m Jake, and this is where I share things that excite me — from climbing gear & trip reports to new custom builds, gear hacks, and beyond. Stay tuned!</p>
+      <p>Hello! I’m Morris, and this is where I share things that excite me — from climbing gear to new custom builds, gear hacks, and beyond. Stay tuned!</p>
 
       <article>
         <h3>🔥 New Gear Setup</h3>
-        <p>Just finished tweaking a new addition to the trad rack — super light and clean. Might do a full post about the gear choices and placements soon.</p>
+        <p>Just finished tweaking a new trad rack — super light and clean. Might do a full post about the gear choices and placements soon.</p>
       </article>
 
       <article>
