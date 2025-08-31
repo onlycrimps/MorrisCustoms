@@ -109,19 +109,40 @@
         padding: 1rem;
       }
     }
+    /* Navigation Bar Styles */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ccc;
+}
+
   </style>
 </head>
 <body>
 
-  <nav class="navbar">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="climbing-trips.html">Climbing Trips</a></li>
-    <li><a href="custom-builds.html">Custom Builds</a></li>
-  </ul>
-  </nav>
-
-  
   <header class="hero">
     <div class="background-image"></div>
     <div class="overlay">
