@@ -50,7 +50,7 @@ html, body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: url('https://mountainproject.com/assets/photos/climb/118571981_medium_1582473623.jpg?cache=1702073602') center center / cover no-repeat;
+  background: url('assests/images/const.PNG') center center / cover no-repeat;
   color: #fff;
 }
 
